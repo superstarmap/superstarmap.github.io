@@ -43,17 +43,16 @@
 
 <body>
     <div class='intro'>
-        <p>If you are a <a href="https://en.wikipedia.org/wiki/Rajinikanth">Rajanikanth</a> fan, zoom in/out randomly for a nice time. <a href="https://github.com/superstarmap/superstarmap.github.io/tree/master">(source)</a>
+        <h3>Superstar World Map</h3>
+        <p>No place can escape <a href="https://en.wikipedia.org/wiki/Rajinikanth">Rajinikanth</a>. <small>
+            <br>
+            <a href="https://github.com/superstarmap/superstarmap.github.io/tree/master">source</a></small>
         </p>
     </div>
 
     <div id='map'></div>
 
     <script>
-        // Lock to India bounds
-        var southWest = L.latLng(7.319, 61.523),
-            northEast = L.latLng(36.774, 100.635),
-            bounds = L.latLngBounds(southWest, northEast);
 
         // Provide your access token
         L.mapbox.accessToken = 'pk.eyJ1IjoicGxhbmVtYWQiLCJhIjoiemdYSVVLRSJ9.g3lbg_eN0kztmsfIPxa9MQ';
@@ -94,7 +93,7 @@
             .addControl(L.mapbox.geocoderControl('mapbox.places', {
                 autocomplete: true
             }))
-            .setView([28,10], 2);
+            .setView([40.7,-74], 12);
 
         L.hash(map);
 
