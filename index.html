@@ -43,10 +43,8 @@
 
 <body>
     <div class='intro'>
-        <h3>Superstar World Map</h3>
-        <p>No place can escape <a href="https://en.wikipedia.org/wiki/Rajinikanth">Rajinikanth</a>. <small>
-            <br>
-            <a href="https://github.com/superstarmap/superstarmap.github.io/tree/master">source</a></small>
+        <p>The <a href="https://en.wikipedia.org/wiki/Rajinikanth">Superstar</a> is everywhere. <small>
+            <a href="https://github.com/superstarmap/superstarmap.github.io/tree/master">(view source)</a></small>
         </p>
     </div>
 
@@ -66,7 +64,7 @@
             postalMap = L.mapbox.tileLayer('planemad.9acc2036'),
             truemarbleSatellite = L.mapbox.tileLayer('planemad.e76fee83'),
             highwaysMap = L.mapbox.tileLayer('planemad.66359ac0'),
-            connectivityGraph = L.mapbox.tileLayer('planemad.5504651b');
+            connectivityGraph = L.mapbox.tileLayer('planemad.5504651b'),
         railwayMap = L.mapbox.tileLayer('planemad.e5dd1290');
 
         var baseLayers = {
@@ -86,9 +84,6 @@
         // Create a map in the div #map
         var map = L.map('map', {
                 layers: superstarMap
-            }, {
-                maxBounds: bounds,
-
             })
             .addControl(L.mapbox.geocoderControl('mapbox.places', {
                 autocomplete: true
